@@ -1,0 +1,40 @@
+﻿
+# Entire containers we're building. Each service creates one container:
+services:
+
+    # Our Kittens REST API service - creating one container:
+    rest-service:
+
+        # Image name to create:
+        image: assaffink/kittens-image:1.0
+
+        # Build the image from following Dockerfile location: 
+        build: .
+
+        # Container name: 
+        container_name: kittens-container
+
+        # Port mapping (host-port:container-port):
+        ports:
+            - 4000:8080
+
+        # On crash - restart container, unless manually stopped: 
+        restart: unless-stopped
+
+        # Volumes: 
+        volumes:
+
+            # Host-Volume --> <host-path-to-folder>:<container-path-to-folder>
+            # - C:\Logs\MyBestLogsEver:/app/Logs
+
+            # Named-Volume --> <volume-name>:<container-path-to-folder>
+            # - logs-volume:/app/Logs
+
+            # Anonymous-Volume --> <container-path-to-folder>
+            - /app/Logs
+
+# -------------------------------------------------------------------------------             
+
+# List of all the above named-volumes only
+volumes:
+    logs-volume:

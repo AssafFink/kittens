@@ -1,0 +1,5 @@
+03/02/2025 12:50:30	IP: ::1	Method: GET	Path: /
+03/02/2025 12:50:39	IP: ::1	Method: GET	Path: /api/kittens
+03/02/2025 12:50:42	IP: ::1	Method: GET	Path: /api/kittens
+03/02/2025 12:50:42	IP: ::1	Method: GET	Path: /api/kittens
+03/02/2025 12:50:45	IP: ::1	Method: GET	Path: /api/kittens/3
